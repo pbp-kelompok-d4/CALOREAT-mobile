@@ -32,6 +32,7 @@ class AppBars extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
       ),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
 }

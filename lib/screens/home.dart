@@ -1,4 +1,5 @@
 import 'package:caloreat_mobile/widgets/app_bar.dart';
+import 'package:caloreat_mobile/widgets/bottom_navbar.dart';
 import 'package:material_ui/material_ui.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -11,6 +12,7 @@ class MyHomePage extends StatelessWidget {
       body: const Center(
         child: Text('CALOREAT TEST'),
       ),
+      bottomNavigationBar: const BottomNavBar(currentIndex: 0),
     );
   }
 }
