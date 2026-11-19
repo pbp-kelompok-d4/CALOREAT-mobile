@@ -21,13 +21,29 @@ Mengusung prinsip Sustainable Living, CALOREAT Mobile tidak hanya berfokus pada 
 
 - Halaman Autentikasi, Profil dan Admin Portal: Halaman login, register, profil pengguna, dan admin portal untuk mengelola pengguna serta basis data makanan. (Samuel Haganta Surbakti)
 
-Homepage, AppBar & Navigation Bar: Halaman utama yang menampilkan ringkasan kalori dan makronutrisi harian, daily streak, pencarian cepat makanan, catatan makan, edukasi singkat pola makan sehat, halaman Reviews dari pengguna, serta AppBar dan navigation bar untuk navigasi aplikasi. (Andranu Dhawy Purditya)
+- Homepage, AppBar & Navigation Bar: Halaman utama yang menampilkan ringkasan kalori dan makronutrisi harian, daily streak, pencarian cepat makanan, catatan makan, edukasi singkat pola makan sehat, halaman Reviews dari pengguna, serta AppBar dan navigation bar untuk navigasi aplikasi. (Andranu Dhawy Purditya)
 
 - Kalkulator & Pelacak Kalori: Pengguna dapat menghitung kebutuhan kalori harian (BMR/TDEE) serta mencatat asupan makanan harian secara teratur. (Nathanael Orrick Hatmoko)
 
 - Katalog Nutrisi Makanan: Menyajikan daftar bahan dan menu makanan beserta detail informasi kandungan gizi sehat seperti makronutrisi (protein, karbohidrat, lemak) dan mikronutrisi (vitamin, mineral). (Muhammad Fachri Novelino)
 
 - Panduan Porsi Makan Sehat: Menyajikan panduan takaran dan ukuran porsi makanan yang ideal untuk dikonsumsi harian sesuai kebutuhan gizi pengguna. (Kusuma Putra Abdillah Adhimaya)
+
+# Peran Pengguna Aplikasi
+
+- Guest User
+
+Dapat mengakses halaman Home, mencari dan menelusuri informasi gizi pada Food Catalog, melihat referensi takaran porsi pada Portion Guide, serta membaca dan memfilter ulasan pengguna di halaman Reviews (read-only).
+Dapat melakukan pendaftaran akun baru atau masuk ke akun yang sudah ada.
+
+- Authenticated User
+
+Memiliki seluruh akses Guest disertai fitur personal yang tersinkronisasi dengan akun pada server PWS.
+Dapat melengkapi dan mengubah Profile, memantau ringkasan kalori, makronutrisi, dan daily streak di Home, mencatat serta mengelola asupan makan harian di Calorie Tracker, menggunakan Portion Guide, serta menambahkan, mengedit, menghapus, dan memfilter ulasan miliknya sendiri pada halaman Reviews.
+
+- Superuser
+
+Bertanggung jawab atas pengelolaan konten dan moderasi data pada ekosistem CALOREAT. Dapat menambah, mengubah, dan menghapus konten pada Portion Guide serta mengelola data katalog nutrisi, sekaligus memoderasi halaman Reviews dengan menghapus ulasan dari pengguna lain.
 
 # Alur Pengintegrasian Data
 Aplikasi CALOREAT Mobile terintegrasi dengan situs web CALOREAT yang di-deploy pada PWS (https://muhammad-fachri54-caloreat.pws.cs.ui.ac.id) melalui web service berbasis Django REST Framework (DRF). Komunikasi antara client Flutter dan backend Django berlangsung melalui protokol HTTP dengan pertukaran data berformat JSON, sehingga aplikasi mobile dan web berbagi satu basis data yang sama.
