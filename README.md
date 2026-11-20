@@ -38,6 +38,11 @@ Mengusung prinsip Sustainable Living, CALOREAT Mobile tidak hanya berfokus pada 
 | 3 | `/api/auth/logout/` | `POST` | Menghapus token di server (mengakhiri sesi) |
 | 4 | `/api/auth/me/` | `GET` | Mengambil data akun yang sedang login |
 | 5 | `/api/catalog/` | `GET` | Mengambil daftar katalog makanan, pencarian (`?q=`), pagination (`?page=`), serta detail makro dan mikronutrisi |
+| 6 | `/api/v1/reviews/` | `GET` | Mengambil daftar ulasan pengguna, mendukung filter rating (`?star=1`–`5`) dan ulasan milik sendiri (`?mine=true`) |
+| 7 | `/api/v1/reviews/` | `POST` | Membuat ulasan baru untuk pengguna yang sedang login |
+| 8 | `/api/v1/reviews/<uuid:review_id>/` | `GET` | Mengambil detail satu ulasan berdasarkan `review_id` |
+| 9 | `/api/v1/reviews/<uuid:review_id>/` | `PUT` / `PATCH` | Mengedit ulasan |
+| 10 | `/api/v1/reviews/<uuid:review_id>/` | `DELETE` | Menghapus ulasan |
 
 
 # Peran Pengguna Aplikasi
