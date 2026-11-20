@@ -43,6 +43,12 @@ Mengusung prinsip Sustainable Living, CALOREAT Mobile tidak hanya berfokus pada 
 | 8 | `/api/v1/reviews/<uuid:review_id>/` | `GET` | Mengambil detail satu ulasan berdasarkan `review_id` |
 | 9 | `/api/v1/reviews/<uuid:review_id>/` | `PUT` / `PATCH` | Mengedit ulasan |
 | 10 | `/api/v1/reviews/<uuid:review_id>/` | `DELETE` | Menghapus ulasan |
+| 11| `/portion-guides/` | GET, HEAD | Mengambil daftar panduan porsi. Bisa difilter dengan query `?meal_type=` (`breakfast`, `lunch`, `dinner`, `snack`). Respons berisi `nutrition_needs`, `meal_targets`, dan `guides`. Jika user login dan profil kalorinya lengkap, setiap guide memuat `personalized_portions`. Dapat diakses publik. |
+| 12 | `/portion-guides/` | POST | Membuat panduan porsi baru. Hanya untuk staff. Mengembalikan data guide dengan status 201. |
+| 13 | `/portion-guides/<guide_id>/` | GET, HEAD | Mengambil detail satu panduan porsi, termasuk `personalized_portions` jika tersedia. Dapat diakses publik. Mengembalikan 404 jika id tidak ditemukan. |
+| 14 | `/portion-guides/<guide_id>/` | PUT | Mengubah seluruh data panduan porsi (semua field wajib dikirim). Hanya untuk staff. |
+| 15 | `/portion-guides/<guide_id>/` | PATCH | Mengubah sebagian data panduan porsi (cukup kirim field yang diubah). Hanya untuk staff. |
+| 16 | `/portion-guides/<guide_id>/` | DELETE | Menghapus panduan porsi. Hanya untuk staff. Mengembalikan status 204 tanpa isi. |
 
 
 # Peran Pengguna Aplikasi
