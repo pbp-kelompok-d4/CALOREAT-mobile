@@ -37,6 +37,7 @@ Mengusung prinsip Sustainable Living, CALOREAT Mobile tidak hanya berfokus pada 
 | 2 | `/api/auth/login/` | `POST` | Memverifikasi email dan password, lalu mengembalikan token |
 | 3 | `/api/auth/logout/` | `POST` | Menghapus token di server (mengakhiri sesi) |
 | 4 | `/api/auth/me/` | `GET` | Mengambil data akun yang sedang login |
+| 5 | `/api/catalog/` | `GET` | Mengambil daftar katalog makanan, pencarian (`?q=`), pagination (`?page=`), serta detail makro dan mikronutrisi |
 
 
 # Peran Pengguna Aplikasi
