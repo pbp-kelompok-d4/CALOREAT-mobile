@@ -1,8 +1,11 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:caloreat_mobile/screens/auth.dart';
 
 class AppBars extends StatelessWidget implements PreferredSizeWidget {
-  AppBars({super.key});
-  
+  final bool showProfileButton;
+
+  AppBars({super.key, this.showProfileButton = true});
+
   @override
   Size get preferredSize => const Size.fromHeight(80);
 
@@ -32,6 +35,27 @@ class AppBars extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
       ),
+
+      actions: [
+        if (showProfileButton)
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: InkWell(
+              customBorder: const CircleBorder(),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const AuthPage()),
+                );
+              },
+              child: const CircleAvatar(
+                radius: 20,
+                backgroundColor: Color(0xFFEFB60A),
+                child: Icon(Icons.person, color: Color(0xFF2A2108), size: 24),
+              ),
+            ),
+          ),
+      ],
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
