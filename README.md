@@ -61,6 +61,22 @@ Dapat melengkapi dan mengubah Profile, memantau ringkasan kalori, makronutrisi, 
 
 Bertanggung jawab atas pengelolaan konten dan moderasi data pada ekosistem CALOREAT. Dapat menambah, mengubah, dan menghapus konten pada Portion Guide serta mengelola data katalog nutrisi, sekaligus memoderasi halaman Reviews dengan menghapus ulasan dari pengguna lain.
 
+## Calorie Count API
+
+Base path: `/api/v1/` on the CALOREAT Django website. Authenticate using `POST /api/v1/auth/login/`, then send `Authorization: Token <token>` on the endpoints below. Requests and responses use JSON.
+
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| GET | `/api/v1/calories/foods/search/?q=<query>&page=1` | Search Open Food Facts products |
+| GET | `/api/v1/calories/foods/barcode/<code>/` | Look up a product by barcode |
+| GET, POST | `/api/v1/calories/entries/` | List entries for `?date=YYYY-MM-DD`, or add an entry |
+| PATCH, DELETE | `/api/v1/calories/entries/<id>/` | Edit or remove an entry owned by the authenticated user |
+| GET | `/api/v1/calories/summary/?date=YYYY-MM-DD` | Get daily calories and macronutrients |
+| GET | `/api/v1/calories/summary/week/?end=YYYY-MM-DD` | Get a seven-day summary |
+| GET, PUT, PATCH | `/api/v1/calories/profile/` | Read or update calorie profile and calculated targets |
+
+To add an entry, send `meal`, `name`, `grams`, and `kcal_100g`; `date`, `brand`, `off_code`, `protein_100g`, `carbs_100g`, `fat_100g`, and `nutriscore` are optional. Profile fields: `sex`, `birth_date`, `height_cm`, `weight_kg`, `activity_level`, and `goal`. Entries and profile data are scoped to the authenticated account. Food search and barcode lookup use Open Food Facts and can be throttled.
+
 # Alur Pengintegrasian Data
 Aplikasi CALOREAT Mobile terintegrasi dengan situs web CALOREAT yang di-deploy pada PWS (https://muhammad-fachri54-caloreat.pws.cs.ui.ac.id) melalui web service berbasis Django REST Framework (DRF). Komunikasi antara client Flutter dan backend Django berlangsung melalui protokol HTTP dengan pertukaran data berformat JSON, sehingga aplikasi mobile dan web berbagi satu basis data yang sama.
 
