@@ -29,6 +29,16 @@ Mengusung prinsip Sustainable Living, CALOREAT Mobile tidak hanya berfokus pada 
 
 - Panduan Porsi Makan Sehat: Menyajikan panduan takaran dan ukuran porsi makanan yang ideal untuk dikonsumsi harian sesuai kebutuhan gizi pengguna. (Kusuma Putra Abdillah Adhimaya)
 
+# Daftar REST API Endpoint
+ 
+| No | Endpoint | Method | Fungsi |
+|----|----------|--------|--------|
+| 1 | `/api/auth/register/` | `POST` | Membuat akun baru |
+| 2 | `/api/auth/login/` | `POST` | Memverifikasi email dan password, lalu mengembalikan token |
+| 3 | `/api/auth/logout/` | `POST` | Menghapus token di server (mengakhiri sesi) |
+| 4 | `/api/auth/me/` | `GET` | Mengambil data akun yang sedang login |
+
+
 # Peran Pengguna Aplikasi
 
 - Guest User
