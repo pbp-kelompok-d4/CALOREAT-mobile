@@ -4,7 +4,7 @@ import 'package:caloreat_mobile/screens/auth.dart';
 class AppBars extends StatelessWidget implements PreferredSizeWidget {
   final bool showProfileButton;
 
-  AppBars({super.key, this.showProfileButton = true});
+  const AppBars({super.key, this.showProfileButton = true});
 
   @override
   Size get preferredSize => const Size.fromHeight(80);

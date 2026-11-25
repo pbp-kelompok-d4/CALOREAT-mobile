@@ -3,7 +3,7 @@ import 'package:caloreat_mobile/widgets/bottom_navbar.dart';
 import 'package:material_ui/material_ui.dart';
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({super.key});
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
