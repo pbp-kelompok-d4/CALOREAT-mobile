@@ -153,3 +153,5 @@ flutter build web --no-wasm-dry-run
 6. **Respect scope**: avoid refactoring unrelated files, renaming existing routes/classes used by teammates, or modifying `README.md` unless requested.
 7. **Never add, commit, and push directly to git**. Let user manually do any git related stuff.
 8. **Always implement clean and organize code structure**. If the code in a file is too long, refactor it into a smaller pieces. 
+9. **Optimize the screen for wide device**. Make sure the screen is optimize for any type of screen size (). Use Expaneded().
+10. **Follow another model style**. If user give unclear instruction (especially about API related stuff) and you are not sure what to do, just follow another model style.
