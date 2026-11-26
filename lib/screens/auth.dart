@@ -8,9 +8,7 @@ class AuthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBars(showProfileButton: false),
-      body: const Center(
-        child: Text('Auth Page'),
-      ),
+      body: const Center(child: Text('Auth Page')),
     );
   }
 }

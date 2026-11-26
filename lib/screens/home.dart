@@ -9,9 +9,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBars(),
-      body: const Center(
-        child: Text('CALOREAT TEST'),
-      ),
+      body: const Center(child: Text('CALOREAT TEST')),
       bottomNavigationBar: const BottomNavBar(currentIndex: 0),
     );
   }

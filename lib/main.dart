@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'CALOREAT',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFFFFAE9),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFEFB60A),
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFEFB60A)),
         useMaterial3: true,
         fontFamily: GoogleFonts.outfit().fontFamily,
 

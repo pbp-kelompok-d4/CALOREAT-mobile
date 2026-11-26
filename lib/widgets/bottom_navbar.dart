@@ -9,11 +9,7 @@ class BottomNavBar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int>? onTap;
 
-  const BottomNavBar({
-    super.key,
-    required this.currentIndex,
-    this.onTap,
-  });
+  const BottomNavBar({super.key, required this.currentIndex, this.onTap});
 
   void _handleTap(BuildContext context, int index) {
     if (onTap != null) {
