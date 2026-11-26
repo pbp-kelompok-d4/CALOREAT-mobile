@@ -9,9 +9,7 @@ class CaloriePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBars(),
-      body: const Center(
-        child: Text('Calorie Page'),
-      ),
+      body: const Center(child: Text('Calorie Page')),
       bottomNavigationBar: const BottomNavBar(currentIndex: 2),
     );
   }

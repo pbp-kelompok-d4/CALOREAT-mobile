@@ -9,9 +9,7 @@ class CatalogPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBars(),
-      body: const Center(
-        child: Text('Catalog Page'),
-      ),
+      body: const Center(child: Text('Catalog Page')),
       bottomNavigationBar: const BottomNavBar(currentIndex: 1),
     );
   }

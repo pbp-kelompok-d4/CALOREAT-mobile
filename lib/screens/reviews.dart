@@ -9,9 +9,7 @@ class ReviewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBars(),
-      body: const Center(
-        child: Text('Reviews Page'),
-      ),
+      body: const Center(child: Text('Reviews Page')),
       bottomNavigationBar: const BottomNavBar(currentIndex: 4),
     );
   }

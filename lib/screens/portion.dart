@@ -9,9 +9,7 @@ class PortionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBars(),
-      body: const Center(
-        child: Text('Portion Page'),
-      ),
+      body: const Center(child: Text('Portion Page')),
       bottomNavigationBar: const BottomNavBar(currentIndex: 3),
     );
   }
